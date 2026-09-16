@@ -164,8 +164,9 @@ credential.
 ```
 cmd/tsproxy/            CLI entry point (up/status/logout/version subcommands)
 internal/config/        Command-line flag parsing and defaults
-internal/tsclient/      tsnet.Server wrapper + interactive auth flow (link/QR/auto-open browser)
 internal/proxy/         SOCKS5 and HTTP/HTTPS forward proxy implementation (stdlib only, dials out via tsnet.Dial)
+internal/tsclient/      tsnet.Server wrapper + interactive auth flow (link/QR/auto-open browser)
+internal/version/       Version and build metadata reporting
 ```
 
 ## Cross-Compiling

@@ -24,9 +24,8 @@ import (
 	"github.com/openminis/tsnet-proxy/internal/config"
 	"github.com/openminis/tsnet-proxy/internal/proxy"
 	"github.com/openminis/tsnet-proxy/internal/tsclient"
+	"github.com/openminis/tsnet-proxy/internal/version"
 )
-
-var version = "dev"
 
 func main() {
 	if len(os.Args) < 2 {
@@ -42,7 +41,7 @@ func main() {
 	case "logout":
 		cmdLogout(os.Args[2:])
 	case "version", "-v", "--version":
-		fmt.Printf("tsproxy %s\n", version)
+		fmt.Printf("tsproxy %s\n", version.String())
 	case "help", "-h", "--help":
 		printUsage()
 	default:
